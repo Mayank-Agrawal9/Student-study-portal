@@ -349,7 +349,7 @@ def register(request):
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(request,f'Account Created for {username}!!')
-            return redirect('login.html')
+            return redirect('login')
 
     else:
         form = UserRegistrationForm()
